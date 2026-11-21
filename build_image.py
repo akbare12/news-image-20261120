@@ -71,26 +71,32 @@ def wrap_n(text, font, width, max_lines):
 HEROES = [
     {
         "n": 1, "cat": "WAR IN EUROPE", "art": "kyiv",
-        "head": "KYIV UNDER FIRE: 110 MISSILES, 3 BRIDGES HIT",
-        "body": ("110 missiles \u2014 27 ballistic \u2014 and 400+ drones hit "
-                 "overnight. Eight killed across Ukraine; three Dnipro "
-                 "bridges hit; power and water cut in Kyiv."),
+        "label": "KYIV", "sublabel": "3 bridges hit",
+        "attr": "Officials' count", "loc": "KYIV, UKRAINE \u00b7 WAR",
+        "head": "Russian missiles hit three Kyiv bridges",
+        "body": ("About 110 missiles and 400 drones hit overnight, killing "
+                 "at least nine and cutting power and water in the capital. "
+                 "(Kyiv Independent, BBC)"),
         "src": "Reuters",
     },
     {
         "n": 2, "cat": "WEATHER", "art": "cyclone",
-        "head": "CYCLONE AKVAN SLAMS INDIA'S EAST COAST",
-        "body": ("Akvan hit near Gopalpur at about 08:00, winds 70\u201380 "
-                 "km/h, gusts to 90. Over 300,000 evacuated to 9,341 "
-                 "shelters; no deaths reported."),
+        "label": "CYCLONE AKVAN", "sublabel": "Landfall \u00b7 8 am",
+        "attr": "Weather office", "loc": "ODISHA, INDIA \u00b7 CYCLONE",
+        "head": "Cyclone Akvan comes ashore in eastern India",
+        "body": ("Crossed the coast near Gopalpur from about 8 am; over "
+                 "300,000 moved to shelters. No deaths reported. "
+                 "(IMD, Deccan Herald)"),
         "src": "IMD",
     },
     {
         "n": 3, "cat": "MARKETS", "art": "selloff",
-        "head": "AI SELL-OFF: ASIA'S WORST WEEK IN YEARS",
-        "body": ("Taiex fell \u22126.2% \u2014 its worst week since 1990, down "
-                 "\u221217.5% \u2014 as Nikkei slid \u22124.8% to 56,606, the KOSPI "
-                 "\u22125.2% and Hang Seng \u22121.9%. SoftBank \u221214.6%."),
+        "label": "AI SELL-OFF", "sublabel": "Asia, Friday's close",
+        "attr": "Closing prices", "loc": "TAIPEI \u00b7 SEOUL \u00b7 TOKYO \u00b7 MARKETS",
+        "head": "AI sell-off sinks Asia's stock markets",
+        "body": ("Taiwan's index fell 6.2% to end its worst week since 1991. "
+                 "Seoul lost 5.2% and Tokyo 5.1% as chipmakers led the "
+                 "slide. (Al Jazeera, Anadolu)"),
         "src": "Morningstar / Reuters",
     },
 ]
@@ -98,62 +104,72 @@ HEROES = [
 SMALL = [
     {
         "n": 4, "cat": "CLIMATE", "art": "cop",
-        "title": "COP31 INTO OVERTIME",
-        "body": "Draft drops \u2018fossil fuel\u2019 words and the $120bn adaptation goal.",
+        "label": "COP31: NO DEAL", "loc": "ANTALYA \u00b7 CLIMATE",
+        "title": "COP31: no deal yet",
+        "body": "The draft text leaves out fossil fuels.",
         "src": "Reuters",
     },
     {
         "n": 5, "cat": "EUROPE", "art": "ukeu",
-        "title": "UK\u2013EU RESET DEAL",
-        "body": "Food trade \u00a35.1bn/yr; 100,000 youth visas/yr; ETS link from 2028.",
+        "label": "UK\u2013EU DEAL", "loc": "BRUSSELS \u00b7 DIPLOMACY",
+        "title": "UK\u2013EU reset deal",
+        "body": "Food trade, youth visas, carbon link.",
         "src": "Reuters",
     },
     {
         "n": 6, "cat": "SPORT", "art": "cricket",
-        "title": "PHILLIPS 118 STUNS INDIA",
-        "body": "118 in Wellington; centuries vs India in all 3 formats in 2026.",
+        "label": "PHILLIPS: 118", "loc": "WELLINGTON \u00b7 CRICKET",
+        "title": "Phillips hits 118",
+        "body": "Hundreds in India in all three formats.",
         "src": "Reuters",
     },
     {
         "n": 7, "cat": "SPACE", "art": "mercury",
-        "title": "BEPICOLOMBO AT MERCURY",
+        "label": "MERCURY", "loc": "MERCURY \u00b7 SPACE",
+        "title": "BepiColombo at Mercury",
         "body": "At Mercury after 8 years; enters orbit tomorrow, 19:24 CET.",
         "src": "ESA",
     },
     {
         "n": 8, "cat": "EUROPE", "art": "strike",
-        "title": "ITALY'S GENERAL STRIKE",
-        "body": "CGIL says 1m+ marched in 100+ cities over pay and the \u20ac26bn budget.",
+        "label": "ITALY: STRIKE", "loc": "ROME \u00b7 LABOUR",
+        "title": "General strike in Italy",
+        "body": "Workers and students march.",
         "src": "Reuters",
     },
     {
         "n": 9, "cat": "WAR IN EUROPE", "art": "poland",
-        "title": "MISSILES ENTER POLAND",
-        "body": "Kh-101 missiles and jet drones flew ~60 km into eastern Poland.",
+        "label": "POLAND: MISSILE", "loc": "EASTERN POLAND \u00b7 SECURITY",
+        "title": "Missile lands in Poland",
+        "body": "It fell in a field; two airports paused.",
         "src": "Polish MoD",
     },
     {
         "n": 10, "cat": "CULTURE", "art": "gta",
-        "title": "GTA VI: $2.36BN DAY ONE",
-        "body": "Reported Fri (Sensor Tower est.): $2.36bn, 24.58m copies on day one.",
+        "label": "GTA VI: $2.36BN", "loc": "GLOBAL \u00b7 CULTURE",
+        "title": "GTA VI: $2.36bn day one",
+        "body": "Reported Fri (Sensor Tower est.): $2.36bn, 24.58m copies.",
         "src": "Sensor Tower",
     },
     {
         "n": 11, "cat": "ECONOMY", "art": "cpi",
-        "title": "JAPAN INFLATION 2.2%",
-        "body": "Core CPI 2.2% in Oct, headline 2.3% \u2014 above the BOJ's 2% target.",
+        "label": "JAPAN: 2.2%", "loc": "TOKYO \u00b7 ECONOMY",
+        "title": "Japan inflation 2.2%",
+        "body": "A December rate rise stays in view.",
         "src": "Reuters",
     },
     {
         "n": 12, "cat": "ENERGY", "art": "hormuz",
-        "title": "HORMUZ STANDOFF",
+        "label": "HORMUZ", "loc": "HORMUZ \u00b7 ENERGY",
+        "title": "Hormuz standoff",
         "body": "~50 ships hold offshore; Brent $92.22 early Friday.",
         "src": "straits.live / Reuters",
     },
     {
         "n": 13, "cat": "ASIA", "art": "exam",
-        "title": "SUNEUNG CHEAT SCANDAL",
-        "body": "111 candidates caught cheating with smart devices in the national exam.",
+        "label": "SUNEUNG", "loc": "SEOUL \u00b7 EDUCATION",
+        "title": "Suneung cheat scandal",
+        "body": "111 candidates caught cheating with smart devices.",
         "src": "BBC",
     },
 ]
@@ -191,6 +207,14 @@ REGIONS = [
     ("EUROPE", 6), ("ASIA", 8), ("AMERICAS", 11), ("MIDDLE EAST", 2),
     ("OCEANIA", 1), ("AFRICA", 1), ("WORLD", 7),
 ]
+
+# One distinct colour per region segment in the region bar.
+REGION_COLORS = {
+    "EUROPE": (38, 70, 120), "ASIA": (176, 30, 30),
+    "AMERICAS": (110, 60, 140), "MIDDLE EAST": (150, 110, 30),
+    "OCEANIA": (20, 110, 110), "AFRICA": (40, 110, 60),
+    "WORLD": (80, 80, 80),
+}
 
 STATS = [
     ("110+", "MISSILES ON UKRAINE"),
@@ -290,21 +314,33 @@ def art_cyclone(d, x, y, w, h):
 
 
 def art_selloff(d, x, y, w, h):
+    # Left ~55%: falling bars. Right ~45%: dark data table of closes.
+    split = int(w * 0.55)
     d.rectangle([x, y, x + w, y + h], fill=(250, 246, 236))
-    d.line([(x + 8, y + h - 14), (x + w - 6, y + h - 14)], fill=INK, width=1)
+    d.line([(x + 8, y + h - 14), (x + split - 6, y + h - 14)], fill=INK, width=1)
     d.line([(x + 8, y + 6), (x + 8, y + h - 14)], fill=INK, width=1)
     # falling bars: Taiex, Nikkei, KOSPI, Hang Seng
     vals = [62, 48, 52, 19]
-    bw = (w - 30) // 4
+    bw = (split - 30) // 4
     for i, v in enumerate(vals):
         bx = x + 14 + i * bw
         bh = int(v * (h - 30) / 62)
         d.rectangle([bx, y + h - 14 - bh, bx + bw - 8, y + h - 14],
                     fill=(176, 30, 30))
-    d.line([(x + 12, y + 10), (x + w - 10, y + h - 26)], fill=(140, 22, 22),
+    d.line([(x + 12, y + 10), (x + split - 10, y + h - 26)], fill=(140, 22, 22),
            width=3)
-    d.polygon([(x + w - 22, y + h - 34), (x + w - 8, y + h - 26),
-               (x + w - 22, y + h - 18)], fill=(140, 22, 22))
+    d.polygon([(x + split - 22, y + h - 34), (x + split - 8, y + h - 26),
+               (x + split - 22, y + h - 18)], fill=(140, 22, 22))
+    # data table of Friday closes
+    d.rectangle([x + split, y, x + w, y + h], fill=(20, 30, 50))
+    rows = [("TAIPEI", "\u22126.2%"), ("SEOUL", "\u22125.2%"),
+            ("TOKYO", "\u22125.1%"), ("HONG KONG", "\u22121.9%")]
+    f_c = F(SANS_B, 10)
+    for i, (city, pct) in enumerate(rows):
+        ry = y + 8 + i * 17
+        d.text((x + split + 8, ry), city, font=f_c, fill=(255, 255, 255))
+        pw = f_c.getlength(pct)
+        d.text((x + w - 8 - pw, ry), pct, font=f_c, fill=(255, 90, 80))
 
 
 def art_cop(d, x, y, w, h):
@@ -581,21 +617,30 @@ def _banner(d, x, y, w, text, font, bg=RED, fg=(255, 255, 255)):
 
 
 def draw_masthead(d, x, y, w):
-    title = "THE WORLD TODAY"
-    f_title = F(SERIF_B, 46)
+    # Kicker line: left red, right count.
+    f_kick = F(SANS_B, 11)
+    d.text((x, y), "THE WORLD IN ONE DAY", font=f_kick, fill=RED_DARK)
+    f_count = F(SANS_B, 10)
+    count = "36 STORIES \u00b7 7 REGIONS \u00b7 EVERY ONE DATED FRIDAY 20 NOVEMBER 2026"
+    cw_ = f_count.getlength(count)
+    d.text((x + w - cw_, y + 1), count, font=f_count, fill=INK)
+    _rule(d, x, y + 16, w, 3)
+    # Giant date masthead: largest serif bold that fits the width.
+    title = "Friday 20 November 2026"
+    f_title = None
+    for size in (68, 66, 64, 62, 60, 58, 56):
+        f = F(SERIF_B, size)
+        if f.getlength(title) <= w:
+            f_title = f
+            break
     tw = f_title.getlength(title)
-    d.text((x + (w - tw) / 2, y), title, font=f_title, fill=INK)
-    sub = ("FRIDAY, 20 NOVEMBER 2026  \u2022  36 STORIES  \u2022  "
-           "7 REGIONS  \u2022  ONE DAY")
-    f_sub = F(SANS_B, 15)
-    sw = f_sub.getlength(sub)
-    d.text((x + (w - sw) / 2, y + 52), sub, font=f_sub, fill=RED_DARK)
-    lead = ("Kyiv hit by 110 missiles as three Dnipro bridges burn \u00b7 "
-            "Cyclone Akvan evacuates 300,000 \u00b7 Asia's markets plunge on "
-            "AI fears \u00b7 COP31 admits 1.5\u00b0C will be passed")
+    d.text((x + (w - tw) / 2, y + 22), title, font=f_title, fill=INK)
+    lead = ("Russian missiles hit Kyiv's bridges \u00b7 Cyclone Akvan strikes "
+            "India \u00b7 An AI sell-off sinks Asia's markets \u00b7 UK and EU "
+            "seal a deal")
     f_lead = F(SERIF, 13)
     lines = wrap(lead, f_lead, w - 40)
-    ly = y + 74
+    ly = y + 96
     for ln in lines:
         lw = f_lead.getlength(ln)
         d.text((x + (w - lw) / 2, ly), ln, font=f_lead, fill=INK_SOFT)
@@ -619,53 +664,89 @@ def draw_stats(d, x, y, w):
 
 
 def draw_regions(d, x, y, w):
-    parts = ["%s %d" % (name, n) for name, n in REGIONS]
-    text = "  \u00b7  ".join(parts) + "   =   36 STORIES"
-    f = F(SANS_B, 12)
-    tw = f.getlength(text)
-    d.rectangle([x, y, x + w, y + 20], fill=INK)
-    d.text((x + (w - tw) / 2, y + 3), text, font=f, fill=(245, 238, 218))
+    # One coloured segment per region (equal widths), white bold text.
+    seg = w // len(REGIONS)
+    f = F(SANS_B, 11)
+    for i, (name, n) in enumerate(REGIONS):
+        sx = x + i * seg
+        sw = seg if i < len(REGIONS) - 1 else w - i * seg
+        d.rectangle([sx, y, sx + sw, y + 20], fill=REGION_COLORS[name])
+        text = "%s %d" % (name, n)
+        tw = f.getlength(text)
+        d.text((sx + (sw - tw) / 2, y + 4), text, font=f,
+               fill=(255, 255, 255))
     return y + 20
 
 
 def draw_hero(img, d, x, y, w, h, hero):
     d.rectangle([x, y, x + w, y + h], outline=INK, width=1,
                 fill=(250, 246, 236))
-    _banner(d, x + 1, y + 1, w - 2,
-            "%d  \u00b7  %s" % (hero["n"], hero["cat"]), F(SANS_B, 10))
-    iy = y + 18
-    _draw_art_clipped(img, ART[hero["art"]], x + 6, iy, w - 12, 72)
+    # Art on top; bold label overlaid on the picture, not a banner above it.
+    ax, ay, aw, ah = x + 6, y + 6, w - 12, 76
+    _draw_art_clipped(img, ART[hero["art"]], ax, ay, aw, ah)
+    f_lab = F(SANS_B, 14)
+    lw = f_lab.getlength(hero["label"])
+    d.rectangle([ax + 4, ay + 4, ax + 4 + lw + 12, ay + 26], fill=RED)
+    d.text((ax + 10, ay + 8), hero["label"], font=f_lab,
+           fill=(255, 255, 255))
+    f_sub = F(SANS_B, 10)
+    sw = f_sub.getlength(hero["sublabel"])
+    d.rectangle([ax + 4, ay + 30, ax + 4 + sw + 12, ay + 46], fill=(255, 255, 255))
+    d.text((ax + 10, ay + 33), hero["sublabel"], font=f_sub, fill=INK)
+    # Attribution strip under the picture.
+    d.rectangle([ax, ay + ah, ax + aw, ay + ah + 13], fill=INK)
+    d.text((ax + 6, ay + ah + 2), hero["attr"], font=F(SANS_B, 9),
+           fill=(255, 255, 255))
+    # Numbered location + category.
+    ly = ay + ah + 15
+    d.ellipse([x + 8, ly, x + 24, ly + 16], fill=BLUE)
+    d.text((x + 8 + 8 - 3, ly + 2), str(hero["n"]), font=F(SANS_B, 10),
+           fill=(255, 255, 255))
+    d.text((x + 28, ly + 2), hero["loc"], font=F(SANS_B, 10), fill=BLUE)
+    # Headline + body (source embedded in parentheses, as the top 10 do).
     f_head = F(SERIF_B, 14)
-    lines = wrap_n(hero["head"], f_head, w - 16, 2)
-    hy = iy + 76
-    for ln in lines:
+    hy = ly + 18
+    for ln in wrap_n(hero["head"], f_head, w - 16, 2):
         d.text((x + 8, hy), ln, font=f_head, fill=INK)
         hy += 17
     f_body = F(SANS, 11)
+    by = hy + 2
     for ln in wrap_n(hero["body"], f_body, w - 16, 3):
-        d.text((x + 8, hy), ln, font=f_body, fill=INK_SOFT)
-        hy += 13
-    d.text((x + 10, y + h - 15), "Source: " + hero["src"],
-           font=F(SANS_B, 9), fill=RED_DARK)
+        d.text((x + 8, by), ln, font=f_body, fill=INK_SOFT)
+        by += 13
     return y + h
 
 
 def draw_small(img, d, x, y, w, h, panel):
     d.rectangle([x, y, x + w, y + h], outline=INK, width=1,
                 fill=(250, 246, 236))
-    _banner(d, x + 1, y + 1, w - 2,
-            "%d  \u00b7  %s" % (panel["n"], panel["cat"]), F(SANS_B, 9))
-    iy = y + 17
-    _draw_art_clipped(img, ART[panel["art"]], x + 5, iy, w - 10, 40)
-    ty = iy + 43
+    # Art on top; short punchy label overlaid on the picture.
+    ax, ay, aw, ah = x + 5, y + 5, w - 10, 44
+    _draw_art_clipped(img, ART[panel["art"]], ax, ay, aw, ah)
+    f_lab = F(SANS_B, 10)
+    lw = f_lab.getlength(panel["label"])
+    lab_w = min(lw + 10, aw - 8)
+    d.rectangle([ax + 3, ay + 3, ax + 3 + lab_w, ay + 17], fill=RED)
+    d.text((ax + 8, ay + 5), panel["label"], font=f_lab,
+           fill=(255, 255, 255))
+    # Attribution strip under the picture.
+    d.rectangle([ax, ay + ah, ax + aw, ay + ah + 10], fill=INK)
+    d.text((ax + 5, ay + ah + 1), panel["src"], font=F(SANS_B, 7),
+           fill=(255, 255, 255))
+    # Numbered location + category.
+    ly = ay + ah + 12
+    d.ellipse([x + 6, ly, x + 18, ly + 12], fill=BLUE)
+    d.text((x + 6 + 6 - 2, ly + 1), str(panel["n"]), font=F(SANS_B, 8),
+           fill=(255, 255, 255))
+    d.text((x + 21, ly + 1), panel["loc"], font=F(SANS_B, 8), fill=BLUE)
+    # Title + body.
+    ty = ly + 14
     d.text((x + 6, ty), panel["title"], font=F(SANS_B, 11), fill=INK)
     f_body = F(SANS, 9)
     by = ty + 15
     for ln in wrap_n(panel["body"], f_body, w - 12, 2):
         d.text((x + 6, by), ln, font=f_body, fill=INK_SOFT)
         by += 12
-    d.text((x + 8, y + h - 12), "Source: " + panel["src"],
-           font=F(SANS_B, 8), fill=RED_DARK)
     return y + h
 
 def draw_also(d, x, y, w, h):
@@ -743,11 +824,9 @@ def build(out_path):
     mx = 24
     cw = W - 2 * mx  # 976
 
-    # paper edge + top rules
+    # paper edge
     d.rectangle([6, 6, W - 7, H - 7], outline=(120, 110, 88), width=1)
     y = 14
-    _rule(d, mx, y, cw, 3)
-    y += 6
     y = draw_masthead(d, mx, y, cw)
     _rule(d, mx, y + 4, cw, 1)
     y += 10
@@ -758,14 +837,14 @@ def build(out_path):
 
     # heroes: 3 across
     hero_w = (cw - 2 * 8) // 3
-    hero_h = 186
+    hero_h = 192
     for i, hero in enumerate(HEROES):
         draw_hero(img, d, mx + i * (hero_w + 8), y, hero_w, hero_h, hero)
     y += hero_h + 6
 
     # small panels: 2 rows of 5
     sm_w = (cw - 4 * 8) // 5
-    sm_h = 114
+    sm_h = 116
     for row in range(2):
         for col in range(5):
             panel = SMALL[row * 5 + col]
@@ -776,12 +855,12 @@ def build(out_path):
     left_w = 500
     right_x = mx + left_w + 14
     right_w = cw - left_w - 14
-    map_h = 176
+    map_h = 170
     d.text((mx, y), "WHERE IT HAPPENED", font=F(SANS_B, 12), fill=INK)
     _rule(d, mx, y + 16, left_w, 1)
     draw_map(d, mx, y + 21, left_w, map_h - 21)
     dc_y = y + map_h + 6
-    dc_h = 122
+    dc_h = 118
     draw_date_check(d, mx, dc_y, left_w, dc_h)
     also_end = draw_also(d, right_x, y, right_w, 0)
     bottom = max(dc_y + dc_h, also_end)
